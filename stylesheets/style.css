@@ -1,0 +1,29 @@
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+.rows {
+  text-align: center;
+}
+
+div {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+/*.rows {
+  display: block;
+}*/
+
+.inputDiv {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
