@@ -11,8 +11,11 @@ var sign = '';
 var gameState = true;
 
 // variance to link each div from DOM
+var XDiv = document.getElementsByClassName('x');
+var ODiv = document.getElementsByClassName('o');
 var boardDiv = document.getElementById('board');
 var result = document.getElementById('resultDiv');
+var restartBtn = document.getElementById('restart-btn')
 
 
 // function to determine who won
@@ -52,7 +55,7 @@ function ticTacToe() {
 
 // adding an even listener on the board div then using event.target to target individual divs in the playing area
 boardDiv.addEventListener('click', function(event) {
-  if (gameState = true) {
+  if (gameState === true) {
     if (event.target.className !== 'x' && event.target.className !== 'o') {
       if (event.target.tagName === 'DIV') {
       playerTurn ++;
@@ -81,16 +84,29 @@ function switchPlay() {
   }
 }
 
-// *** gameState not working properly??????? ***
 
+restartBtn.addEventListener('click', function() {
+  input = [
+    [00,01,02],
+    [10,11,12],
+    [20,21,22]
+  ];
+  playerTurn = 0;
+  sign = '';
+  gameState = true;
+  result.textContent = '';
+  XDiv.className = 'inputDiv';
+  ODiv.className = 'inputDiv';
+});
 // **** restart button ****
 // when clicked on:
-// 1) change all div's class to none so that all the images goes away
 // reset the input array
 // reset playerTurn to 0
 // reset sign to ''
 // reset gameState to true
 // empty resultDiv
+// change all div's class to none so that all the images goes away
+
 
 // *** need a 2 variable to keep score of x and o wins ***
 // then display it on the screen
