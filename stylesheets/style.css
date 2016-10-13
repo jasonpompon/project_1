@@ -1,6 +1,7 @@
 body {
   background-color: #2a2a2a;
   font-family: 'Indie Flower', cursive;
+  color: white;
 }
 #wrapper {
   width: 80%;
@@ -36,19 +37,10 @@ span {
   color: white;
   padding: 25px;
   font-family: 'Indie Flower', cursive;
-  font-size: 1.5em;
+  font-size: 1.25em;
   font-weight: bold;
+  /*border-top: 1px solid white;*/
 }
-
-/*.rows {
-  display: block;
-}*/
-
-/*.inputDiv {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}*/
 
 .x {
   background-image: url("../images/Xicon.png");
@@ -79,8 +71,16 @@ footer a {
 
 button {
     padding: 7px 10px;
-    border-radius: 30px;
+    border-radius: 50px;
     font-weight: bold;
+}
+
+#xScore, #oScore {
+  display: inline;
+  margin: 0 50px;
+  font-family: 'Courier New', cursive;
+  font-size: 1.75em;
+  font-weight: bold;
 }
 
 
@@ -89,7 +89,7 @@ button {
 
 /**** Using media-query to make responsive for smaller screen *****/
 
-@media (max-width: 30em) {
+@media (max-width: 55em) {
     #wrapper {
       width: 100%;
       margin: 0;
@@ -97,9 +97,18 @@ button {
 
     h1 {
       font-size: 2.5em;
+      margin: 15px 0;
     }
 
     span {
         text-decoration: none;
+    }
+
+    #resultDiv {
+      font-size: 1em;
+    }
+
+    #xScore, #oScore {
+      margin: 0 30px;
     }
 }

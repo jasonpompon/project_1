@@ -1,5 +1,4 @@
-// writing variables on top
-
+// a nested array to hold the value of x or o when user register a click
 var input = [
   [00,01,02],
   [10,11,12],
@@ -9,39 +8,50 @@ var input = [
 var playerTurn = 0;
 var sign = '';
 var gameState = true;
+var scoreO = 0;
+var scoreX = 0;
 
 // variance to link each div from DOM
-var boardDiv = document.getElementById('board');
-var result = document.getElementById('resultDiv');
-var restartBtn = document.getElementById('restart-btn')
-
+var boardDiv = document.querySelector('#board');
+var result = document.querySelector('#resultDiv');
+var restartBtn = document.querySelector('#restart-btn');
+var scoreODiv = document.querySelector('#OScore');
+var scoreXDiv = document.querySelector('#XScore');
 
 // function to determine who won
 function ticTacToe() {
   // declare a winner when 3cosecutive sign is found
   if (input[0][0] === input[1][1] && input[1][1] === input[2][2]) {
     result.textContent = sign + ' is the WINNER!';
+    scoreboard();
     gameState = false;
   } else if(input[0][2] === input[1][1] && input[1][1] === input[2][0]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[0][0] === input[1][0] && input[1][0] === input[2][0]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[0][1] === input[1][1] && input[1][1] === input[2][1]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[0][2] === input[1][2] && input[1][2] === input[2][2]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[0][0] === input[0][1] && input[0][1] === input[0][2]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[1][0] === input[1][1] && input[1][1] === input[1][2]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if(input[2][0] === input[2][1] && input[2][1] === input[2][2]) {
     result.textContent = sign + ' is the WINNER!';
+    // scoreboard();
     gameState = false;
   } else if (playerTurn >= 9)  {
     result.textContent = 'DRAW!';
@@ -82,7 +92,7 @@ function switchPlay() {
   }
 }
 
-
+// adding an event listener to the restart button so that it reset all the variables and the boad's display
 restartBtn.addEventListener('click', function() {
   input = [
     [00,01,02],
@@ -92,21 +102,25 @@ restartBtn.addEventListener('click', function() {
   playerTurn = 0;
   sign = '';
   gameState = true;
-  result.textContent = '';
+  result.textContent = '“Be the change that you wish to see in the world.” - Mahatma Gandhi';
   var squares = document.querySelectorAll('#board div');
   for (var i = 0; i < squares.length; i++) {
     squares[i].className = 'inputDiv';
   }
 });
-// **** restart button ****
-// when clicked on:
-// reset the input array
-// reset playerTurn to 0
-// reset sign to ''
-// reset gameState to true
-// empty resultDiv
-// change all div's class to none so that all the images goes away
 
+// a functuon to check which sign won then increasing the score by 1 then updating the DOM
+function scoreboard() {
+  if (sign === 'X') {
+    scoreX ++;
+    scoreXDiv.textContent = 'X: ' + scoreX;
+  } else {
+    scoreO ++;
+    scoreODiv.textContent = 'O: ' + scoreO;
+  }
+}
 
-// *** need a 2 variable to keep score of x and o wins ***
-// then display it on the screen
+// fix the scoreboard function
+
+// *** bonus set a function/variable that randomly generate a quote from list of quotes from my facebook profile ***
+// when they click on restart
