@@ -15,8 +15,8 @@ var scoreX = 0;
 var boardDiv = document.querySelector('#board');
 var result = document.querySelector('#resultDiv');
 var restartBtn = document.querySelector('#restart-btn');
-var scoreODiv = document.querySelector('#OScore');
-var scoreXDiv = document.querySelector('#XScore');
+var scoreODiv = document.querySelector('#oScore');
+var scoreXDiv = document.querySelector('#xScore');
 
 // function to determine who won
 function ticTacToe() {
@@ -27,31 +27,31 @@ function ticTacToe() {
     gameState = false;
   } else if(input[0][2] === input[1][1] && input[1][1] === input[2][0]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[0][0] === input[1][0] && input[1][0] === input[2][0]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[0][1] === input[1][1] && input[1][1] === input[2][1]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[0][2] === input[1][2] && input[1][2] === input[2][2]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[0][0] === input[0][1] && input[0][1] === input[0][2]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[1][0] === input[1][1] && input[1][1] === input[1][2]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if(input[2][0] === input[2][1] && input[2][1] === input[2][2]) {
     result.textContent = sign + ' is the WINNER!';
-    // scoreboard();
+    scoreboard();
     gameState = false;
   } else if (playerTurn >= 9)  {
     result.textContent = 'DRAW!';
