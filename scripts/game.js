@@ -11,8 +11,6 @@ var sign = '';
 var gameState = true;
 
 // variance to link each div from DOM
-var XDiv = document.getElementsByClassName('x');
-var ODiv = document.getElementsByClassName('o');
 var boardDiv = document.getElementById('board');
 var result = document.getElementById('resultDiv');
 var restartBtn = document.getElementById('restart-btn')
@@ -95,8 +93,10 @@ restartBtn.addEventListener('click', function() {
   sign = '';
   gameState = true;
   result.textContent = '';
-  XDiv.className = 'inputDiv';
-  ODiv.className = 'inputDiv';
+  var squares = document.querySelectorAll('#board div');
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].className = 'inputDiv';
+  }
 });
 // **** restart button ****
 // when clicked on:
