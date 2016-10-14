@@ -118,7 +118,7 @@ button {
     }
 }
 
-@media (max-width: 386px) {
+@media (max-width: 374px) {
 
     #board div {
       width: 60px;
