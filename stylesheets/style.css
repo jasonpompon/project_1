@@ -34,6 +34,7 @@ span {
   display: inline-block;
   background-color: white;
   border-radius: 5px;
+  box-shadow: 5px 5px darkgrey;
 }
 
 #board div:hover {
