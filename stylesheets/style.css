@@ -41,7 +41,7 @@ span {
 }
 
 button:hover {
-  background-color: grey;
+  background-color: darkslategray;
 }
 
 #resultDiv {
