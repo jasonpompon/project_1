@@ -115,6 +115,12 @@ button {
 
     #xScore, #oScore {
       margin: 0 20px;
+      display: block;
+    }
+
+    button {
+      color: white;
+      margin: 20px 0;
     }
 }
 
