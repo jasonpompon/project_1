@@ -1,5 +1,4 @@
-# project_1
-## ticTacToe
+# Tic Tac Toe
 
 [Live version](https://jasonpompon.github.io/project_1)
 
