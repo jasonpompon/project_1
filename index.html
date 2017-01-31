@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title">
-  <title>Tic-Tac-Toe</title>
-</head>
-<body>
-  <section id='wrapper'>
-    <h1>Play <span>Tic-Tac-Toe</span></h1>
-    <section id='board'>
-      <section class='rows'>
-        <div class="inputDiv" data-row="0" data-column="0"></div>
-        <div class="inputDiv" data-row="0" data-column="1"></div>
-        <div class="inputDiv" data-row="0" data-column="2"></div>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title">
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <section id='wrapper'>
+      <h1>Play <span>Tic-Tac-Toe</span></h1>
+      <section id='board'>
+        <section class='rows'>
+          <div class="inputDiv" data-row="0" data-column="0"></div>
+          <div class="inputDiv" data-row="0" data-column="1"></div>
+          <div class="inputDiv" data-row="0" data-column="2"></div>
+        </section>
+        <section class='rows'>
+          <div class="inputDiv" data-row="1" data-column="0"></div>
+          <div class="inputDiv" data-row="1" data-column="1"></div>
+          <div class="inputDiv" data-row="1" data-column="2"></div>
+        </section>
+        <section class='rows'>
+          <div class="inputDiv" data-row="2" data-column="0"></div>
+          <div class="inputDiv" data-row="2" data-column="1"></div>
+          <div class="inputDiv" data-row="2" data-column="2"></div>
+        </section>
       </section>
-      <section class='rows'>
-        <div class="inputDiv" data-row="1" data-column="0"></div>
-        <div class="inputDiv" data-row="1" data-column="1"></div>
-        <div class="inputDiv" data-row="1" data-column="2"></div>
+      <section id='outputArea'>
+        <div id='resultDiv'></div>
+        <div id='xScore'>X: [0]</div>
+        <button id='restart-btn'>RESTART</button>
+        <div id='oScore'>O: [0]</div>
       </section>
-      <section class='rows'>
-        <div class="inputDiv" data-row="2" data-column="0"></div>
-        <div class="inputDiv" data-row="2" data-column="1"></div>
-        <div class="inputDiv" data-row="2" data-column="2"></div>
-      </section>
+      <footer>
+    	  FOLLOW <a href="https://twitter.com/JasonPompon" target="_blank">@jasonpompon</a>
+      </footer>
     </section>
-    <section id='outputArea'>
-      <div id='resultDiv'></div>
-      <div id='xScore'>X: [0]</div>
-      <button id='restart-btn'>RESTART</button>
-      <div id='oScore'>O: [0]</div>
-    </section>
-    <footer>
-        	FOLLOW <a href="https://twitter.com/JasonPompon" target="_blank">@jasonpompon</a>
-    </footer>
-  </section>
-  <script src='scripts/game.js'></script>
-</body>
+    <script src='scripts/game.js'></script>
+  </body>
 </html>
