@@ -20,6 +20,7 @@ var scoreXDiv = document.querySelector('#xScore');
 
 // some quoted that will be automatically generated on the page when the restart button is pressed
 var quotes = ['“ Good judgement is the result of experience and experience the result of bad judgement. ” - Mark Twain', '" Insanity: doing the same thing over and over again and expecting different results. " - Albert Einstein', '" When written in Chinese, the word "crisis" is composed of two characters. One represents danger, the other opportunity. " - John F. Kennedy', '“ Be the change that you wish to see in the world. ” - Mahatma Gandhi', '“ If debugging is the process of removing software bugs, then programming must be the process of putting them in.” - Edsger Dijkstra', '“ Java is to JavaScript what Car is to Carpet. ” - Chris Heilmann', '“ Any fool can write code that a computer can understand. Good programmers write code that humans can understand. ” - Martin Fowler', '“ First, solve the problem. Then, write the code. ” - John Johnson', '“ Be nice to nerds. Chances are you’ll end up working for one. ” —Bill Gates', '“ Try not. Do, or do not. There is no try. ” – Yoda, The Empire Strikes Back'];
+
 var rand = Math.floor(Math.random()*(quotes.length-0)+0);
 result.textContent = quotes[rand];
 

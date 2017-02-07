@@ -19,3 +19,4 @@ My unresolved problem is I couldn't get the favicon.ico to appear.
 
 #### Future Addition
 > Incorporate some sort of AI so one can play on his own
+> Ability to change character
