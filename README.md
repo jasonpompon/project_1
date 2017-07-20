@@ -2,7 +2,7 @@
 
 [Live version](https://jasonpompon.github.io/project_1)
 
-This is my 1st project
+This is my 1st EVER project
 
 ### Stack
 > HTML, CSS and JavaScript
